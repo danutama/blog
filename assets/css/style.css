@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk&family=Inter&display=swap');
+
+:root {
+  /* ----- COLORS ----- */
+  --white: #fff;
+  --body-color: #fff;
+  --dark-light: #000000;
+  --light-dark: #fff;
+  --gray-color: rgb(129, 129, 129);
+  --secondary-color: #ededed;
+  --shadow-text: rgba(113, 113, 113, 0.4);
+
+  /* ----- FONT----- */
+  --text-font-family: 'Inter';
+  --special-font-family: 'Familjen Grotesk';
+  --line-height: 1.8em;
+
+  --small-fs: 1.1rem;
+  --normal-fs: 1.35rem;
+  --big-fs: 1.75rem;
+  --xl-fs: 3rem;
+  --large-fs: 6rem;
+}
+
+.dark-theme {
+  --body-color: #0a0a0a;
+  --dark-light: #fff;
+  --light-dark: #000000;
+  --secondary-color: #121212;
+  --shadow-text: rgba(163, 163, 163, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--text-font-family);
+  font-weight: normal;
+  background-color: var(--body-color);
+  overflow: auto;
+}
+
+section {
+  background-color: var(--body-color);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0 8rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1204px;
+  padding: 1rem 0;
+}
+
+h1 {
+  font-family: var(--special-font-family);
+  color: var(--dark-light);
+  font-size: var(--large-fs);
+}
+
+h2 {
+  font-weight: normal;
+  color: var(--dark-light);
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: var(--small-fs);
+  color: var(--dark-light);
+  margin-bottom: 3rem;
+}
+
+h1::selection,
+span::selection,
+p::selection,
+div::selection,
+a::selection,
+i::selection,
+button::selection {
+  color: var(--white);
+  background-color: #ff0000;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--dark-light);
+}
+
+a:hover {
+  color: rgb(255, 94, 0);
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  font-family: var(--text-font-family) !important;
+}
+
+/* ========================== HEADER NAV =========================== */
+/* ----------- DARK LIGHT MODE ------------ */
+.navbar-btn-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.theme-toggle-button {
+  font-size: var(--normal-fs);
+  color: #000000;
+  mix-blend-mode: difference;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  padding: 5px 15px;
+  outline: none;
+}
+/* --------- END ---------- */
+
+nav {
+  background-color: transparent;
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0;
+  width: 90%;
+  max-width: 1204px;
+}
+
+.nav-logo {
+  font-family: var(--special-font-family);
+  font-size: var(--xl-fs);
+  color: var(--white);
+  mix-blend-mode: difference;
+}
+
+.nav-logo:hover {
+  color: var(--white);
+}
+
+/* ================INDEX HERO================ */
+.list-blog {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 25px;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+}
+
+.blog-box {
+  width: 100%;
+  background-color: var(--body-color);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 22px 20px -20px;
+}
+
+.blog-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.blog-title {
+  font-size: var(--normal-fs);
+  margin: 1rem 0 1rem 0;
+}
+
+/* ================= FOOTER ================= */
+#footer-section {
+  margin: 0 !important;
+  padding: 0 0 2rem 0 !important;
+}
+
+.container.footer {
+  text-align: center;
+}
+
+.footer-credit {
+  color: var(--dark-light);
+  font-weight: bold;
+  font-size: var(--small-fs);
+}
+
+/* ========================== MEDIA QUERY =========================== */
+@media (max-width: 768px) {
+  :root {
+    /* ----- FONT SIZE ----- */
+    --small-fs: 1.1rem;
+    --normal-fs: 1.25rem;
+    --big-fs: 1.75rem;
+    --xl-fs: 2.5rem;
+    --large-fs: 4rem;
+  }
+
+  div,
+  span,
+  button,
+  a,
+  i {
+    cursor: default !important;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    /* ----- FONT SIZE ----- */
+    --small-fs: 0.875rem;
+    --normal-fs: 1rem;
+    --big-fs: 1.15rem;
+    --xl-fs: 1.6rem;
+    --large-fs: 3.5rem;
+  }
+
+  /*============== NAVBAR BREAKPOINT ===============*/
+  nav {
+    padding: 10px 0;
+  }
+  /* ===================== NAV END ======================= */
+}
