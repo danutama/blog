@@ -168,20 +168,14 @@ nav {
 /* ================INDEX HERO================ */
 .list-blog {
   width: 100%;
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  border-radius: 25px;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
 }
 
 .blog-box {
-  width: 100%;
-  background-color: var(--body-color);
-  padding: 1rem;
-  border-radius: 20px;
-  /* box-shadow: rgba(0, 0, 0, 0.45) 0px 22px 20px -20px; */
+  border-bottom: solid 1px var(--dark-light);
+  padding-bottom: 1rem;
 }
 
 .blog-box img {
@@ -194,15 +188,25 @@ nav {
   margin: 1rem 0 0 0;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+.blog-title span {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--dark-light);
+}
+
+.blog-title a {
+  position: absolute;
+  right: 0;
 }
 
 .blog-title:hover a {
   text-decoration: underline;
   color: rgb(255, 94, 0);
-}
-
-.blog-title i {
-  color: var(--dark-light);
 }
 
 /* ================= FOOTER ================= */
@@ -250,7 +254,7 @@ nav {
 img.banner {
   width: 100%;
   margin-bottom: 2rem;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .single-paraghraph p {
