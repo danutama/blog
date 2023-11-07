@@ -191,7 +191,18 @@ nav {
 
 .blog-title {
   font-size: var(--normal-fs);
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-title:hover a {
+  text-decoration: underline;
+  color: rgb(255, 94, 0);
+}
+
+.blog-title i {
+  color: var(--dark-light);
 }
 
 /* ================= FOOTER ================= */
@@ -231,6 +242,9 @@ nav {
 
 .single-line {
   margin: 0 0 3rem 0;
+  border: none;
+  height: 1px;
+  background-color: var(--dark-light);
 }
 
 img.banner {
@@ -253,7 +267,7 @@ img.banner {
 .btn-back a {
   font-size: var(--normal-fs);
   border: solid 2px var(--dark-light);
-  padding: 15px 40px;
+  padding: 10px 40px;
   border-radius: 50px;
 }
 
