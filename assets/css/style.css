@@ -181,7 +181,7 @@ nav {
   background-color: var(--body-color);
   padding: 1rem;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 22px 20px -20px;
+  /* box-shadow: rgba(0, 0, 0, 0.45) 0px 22px 20px -20px; */
 }
 
 .blog-box img {
@@ -208,6 +208,53 @@ nav {
   color: var(--dark-light);
   font-weight: bold;
   font-size: var(--small-fs);
+}
+
+/* ========================== SINGLE BLOG =========================== */
+#single-hero {
+  padding-top: 6rem;
+}
+
+.single-blog {
+  min-height: 100vh;
+  margin-bottom: 5rem;
+}
+
+.breadcrumb {
+  color: var(--gray-color);
+  font-size: var(--small-fs);
+}
+
+.single-title {
+  margin-bottom: 2rem !important;
+}
+
+.single-line {
+  margin: 0 0 3rem 0;
+}
+
+img.banner {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 25px;
+}
+
+.single-paraghraph p {
+  line-height: var(--line-height);
+  font-size: var(--normal-fs);
+  color: var(--dark-light);
+}
+
+.btn-back {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-back a {
+  font-size: var(--normal-fs);
+  border: solid 2px var(--dark-light);
+  padding: 15px 40px;
+  border-radius: 50px;
 }
 
 /* ========================== MEDIA QUERY =========================== */
@@ -243,6 +290,10 @@ nav {
   /*============== NAVBAR BREAKPOINT ===============*/
   nav {
     padding: 10px 0;
+  }
+
+  .theme-toggle-button {
+    font-size: var(--small-fs);
   }
   /* ===================== NAV END ======================= */
 }
