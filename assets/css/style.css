@@ -42,6 +42,7 @@ body {
   font-weight: normal;
   background-color: var(--body-color);
   overflow: auto;
+  min-height: 100vh;
 }
 
 section {
@@ -216,22 +217,24 @@ nav {
 }
 
 .container.footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 
-.footer-credit,
-.footer-credit a {
-  color: var(--gray-color);
+.footer-credit-left,
+.footer-credit-right,
+.container.footer a {
+  color: var(--dark-light);
   font-size: var(--small-fs);
+  text-align: start;
+  font-weight: bold;
+  line-height: 1.5rem;
 }
 
-.footer-credit a:hover {
-  color: rgb(255, 94, 0);
+.container.footer a:hover {
   text-decoration: underline;
-}
-
-.footer-credit a i {
-  font-size: var(--small-fs);
 }
 
 /* ========================== SINGLE BLOG =========================== */
@@ -332,4 +335,9 @@ img.banner {
     font-size: var(--small-fs);
   }
   /* ===================== NAV END ======================= */
+
+  .container.footer {
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
