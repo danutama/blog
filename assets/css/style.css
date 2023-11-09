@@ -219,9 +219,18 @@ nav {
   text-align: center;
 }
 
-.footer-credit {
-  color: var(--dark-light);
-  font-weight: bold;
+.footer-credit,
+.footer-credit a {
+  color: var(--gray-color);
+  font-size: var(--small-fs);
+}
+
+.footer-credit a:hover {
+  color: rgb(255, 94, 0);
+  text-decoration: underline;
+}
+
+.footer-credit a i {
   font-size: var(--small-fs);
 }
 
@@ -268,11 +277,20 @@ img.banner {
   text-align: center;
 }
 
-.btn-back a {
+.btn-back button {
   font-size: var(--normal-fs);
+  background-color: transparent;
+  color: var(--dark-light);
   border: solid 2px var(--dark-light);
   padding: 10px 40px;
   border-radius: 50px;
+}
+
+.btn-back button:hover,
+.btn-back button:active {
+  border: solid 2px var(--dark-light);
+  background-color: var(--dark-light);
+  color: var(--light-dark);
 }
 
 /* ========================== MEDIA QUERY =========================== */
