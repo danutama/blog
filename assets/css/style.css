@@ -66,6 +66,7 @@ h1 {
   font-family: var(--special-font-family);
   color: var(--dark-light);
   font-size: var(--large-fs);
+  font-weight: normal;
 }
 
 h2 {
@@ -185,27 +186,15 @@ nav {
 }
 
 .blog-title {
-  font-size: var(--normal-fs);
+  font-size: var(--small-fs);
   margin: 1rem 0 0 0;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.blog-title span {
-  width: 80%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: var(--dark-light);
 }
 
 .blog-title a {
-  position: absolute;
-  right: 0;
+  color: var(--dark-light);
 }
 
-.blog-title:hover a {
+.blog-title a:hover {
   text-decoration: underline;
   color: rgb(255, 94, 0);
 }
@@ -335,6 +324,10 @@ img.banner {
     font-size: var(--small-fs);
   }
   /* ===================== NAV END ======================= */
+
+  .blog-title {
+    font-size: var(--normal-fs);
+  }
 
   .container.footer {
     justify-content: space-between;
